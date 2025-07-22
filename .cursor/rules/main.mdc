@@ -20,10 +20,11 @@ astro-docs-view/
 │   ├── deco.gen.ts      # Generated types for integrations
 │   ├── wrangler.toml    # Cloudflare Workers config
 │   └── package.json     # Server dependencies
-└── view/                # Astro Documentation Site (Starlight theme)
+└── view/                # Astro Documentation Site (Starlight theme + Tailwind CSS)
     ├── src/
     │   ├── content/docs/  # Documentation content (MDX/Markdown)
     │   ├── assets/        # Static assets
+    │   ├── styles/        # Tailwind CSS styles and theming
     │   └── content.config.ts  # Content configuration
     ├── astro.config.mjs   # Astro configuration with Starlight
     └── package.json       # Frontend dependencies
@@ -108,6 +109,7 @@ export default runtime;
 - `astro.config.mjs` - Astro configuration with Starlight theme
 - `src/content/docs/` - Documentation content in MDX/Markdown
 - `src/assets/` - Static assets (images, etc.)
+- `src/styles/global.css` - Tailwind CSS configuration and theming
 - `src/content.config.ts` - Content configuration
 
 **Starlight Configuration:**
@@ -187,9 +189,11 @@ npm install my-package
 
 ### When Customizing the Theme:
 1. Edit `view/astro.config.mjs` for basic configuration
-2. Use Starlight's built-in components for consistent design
-3. Leverage Astro's component system for custom functionality
-4. Use Starlight's CSS custom properties for theming
+2. Edit `view/src/styles/global.css` for Tailwind CSS theming (fonts, colors, etc.)
+3. Use Starlight's built-in components for consistent design
+4. Leverage Astro's component system for custom functionality
+5. Use Tailwind CSS classes directly in MDX content
+6. Use Starlight's CSS custom properties for theming
 
 ## Environment Setup
 
@@ -237,6 +241,7 @@ execute: async ({ context }) => {
 - Structure content with proper headings (H1, H2, H3)
 - Include code examples with syntax highlighting
 - Use Starlight components for enhanced features
+- Apply Tailwind CSS classes for custom styling in MDX content
 - Keep documentation up-to-date with code changes
 
 ### Content Organization:
@@ -252,4 +257,4 @@ execute: async ({ context }) => {
 - Use browser dev tools for frontend debugging
 - Check Astro and Starlight documentation for troubleshooting
 
-This template provides a complete full-stack development environment for building MCP servers with beautiful documentation sites. Focus on adding your business logic in tools and workflows while leveraging Astro and Starlight for professional documentation.
+This template provides a complete full-stack development environment for building MCP servers with beautiful documentation sites. Focus on adding your business logic in tools and workflows while leveraging Astro, Starlight, and Tailwind CSS for professional documentation.
