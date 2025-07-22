@@ -9,7 +9,7 @@ directory = "./view-build"
 binding = "ASSETS"
 
 [deco]
-workspace = "joao-teste-legal"
+workspace = ""
 bindings = []
 enable_workflows = true
 local = false
